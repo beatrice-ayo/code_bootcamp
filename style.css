@@ -1,230 +1,265 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naija to UK — Your guide to starting life in the UK</title>
-  <meta name="description" content="Naija to UK is a friendly guide for Nigerians moving to the UK for the first time — accommodation, transport, SIM cards, cost of living and community, all in one place." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+/* ---------------------------------------------
+   Naija to UK — design tokens
+--------------------------------------------- */
+:root {
+  --color-bg: #faf6ee;
+  --color-surface: #ffffff;
+  --color-green: #1b6b4a;
+  --color-green-dark: #10402d;
+  --color-navy: #1f3a5f;
+  --color-amber: #e29a3c;
+  --color-text: #221d17;
+  --color-text-soft: #5c564c;
+  --color-border: #e6dcc8;
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="logo" href="#top">
-        Naija <span class="logo-arrow" aria-hidden="true">→</span> UK
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
-          <span class="visually-hidden">Menu</span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
-        <ul class="nav-list" id="navList">
-          <li><a href="#story">Our story</a></li>
-          <li><a href="#help">What we help with</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#join">Join the list</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-heading">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow-plain">A guide, not a search engine</p>
-          <h1 id="hero-heading">Naija to UK</h1>
-          <p class="subheading">Your guide to starting life in the UK</p>
-          <p class="welcome">
-            Welcome! However you found your way here — <em>ẹ kú àbọ̀</em>, welcome, we're glad you did.
-            If you're Nigerian and thinking about, preparing for, or newly landed in the UK, this
-            is the place we're building for you: one home for the questions that usually take
-            weeks of scattered searching to answer, written by someone who wants your first year
-            here to feel a lot less overwhelming than it sounds.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#join">Join the waitlist</a>
-            <a class="btn btn-ghost" href="#help">See what we cover</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 420 420" class="route-svg">
-            <path id="routePath" class="route-path" d="M 60 330 C 140 260, 160 160, 240 120 S 360 60, 370 60" />
-            <circle cx="60" cy="330" r="6" class="route-dot" />
-            <circle cx="370" cy="60" r="6" class="route-dot" />
-            <text x="30" y="360" class="route-label">Lagos</text>
-            <text x="320" y="45" class="route-label">London</text>
-            <g class="route-plane">
-              <path d="M0 0 L14 4 L0 8 L3 4 Z" />
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
+  --step-0: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.4rem + 1vw, 2.1rem);
+  --step-3: clamp(2.2rem, 1.8rem + 2vw, 3.4rem);
 
-    <section class="help" id="help" aria-labelledby="help-heading">
-      <div class="wrap">
-        <h2 id="help-heading">Everything you need, in one place</h2>
-        <p class="section-lede">
-          Instead of a hundred open tabs and half-answered forum threads, here's what we're
-          putting under one roof.
-        </p>
-        <ul class="help-grid">
-          <li class="help-card">
-            <svg class="help-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 20 L20 8 L34 20 M10 18 V32 H30 V18" /></svg>
-            <h3>Finding accommodation</h3>
-            <p>How UK renting actually works, what a guarantor is, and questions worth asking before you sign anything.</p>
-          </li>
-          <li class="help-card">
-            <svg class="help-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 26 H32 M10 26 V14 A2 2 0 0 1 12 12 H28 A2 2 0 0 1 30 14 V26 M12 30 A2 2 0 1 1 12 30 M28 30 A2 2 0 1 1 28 30" /></svg>
-            <h3>Getting around</h3>
-            <p>Buses, trains and the Tube demystified — oyster cards, contactless taps, and how not to overpay.</p>
-          </li>
-          <li class="help-card">
-            <svg class="help-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M13 6 H27 A2 2 0 0 1 29 8 V32 A2 2 0 0 1 27 34 H13 A2 2 0 0 1 11 32 V8 A2 2 0 0 1 13 6 Z M18 30 H22" /></svg>
-            <h3>Getting a SIM card</h3>
-            <p>Networks, contract vs. pay-as-you-go, and what to bring so it takes ten minutes, not a whole afternoon.</p>
-          </li>
-          <li class="help-card">
-            <svg class="help-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 14 H34 V30 A2 2 0 0 1 32 32 H8 A2 2 0 0 1 6 30 Z M6 14 L10 7 H30 L34 14" /><circle cx="27" cy="23" r="2.5" /></svg>
-            <h3>Understanding the cost of living</h3>
-            <p>A realistic picture of everyday spending, so budgeting your first months isn't a guessing game.</p>
-          </li>
-          <li class="help-card">
-            <svg class="help-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="14" r="5" /><circle cx="27" cy="16" r="4" /><path d="M6 32 C6 25 11 21 16 21 C19 21 21.5 22.5 23 24.5 M22 32 C22 27 25 24 29 24 C32.5 24 35 26.5 35 30" /></svg>
-            <h3>Settling into your community</h3>
-            <p>Finding your neighbourhood, the nearest Nigerian shops and churches, and people who get it.</p>
-          </li>
-          <li class="help-card">
-            <svg class="help-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5 C11 5 5 12 5 20 C5 28 11 35 20 35 C29 35 35 28 35 20 C35 15 33 11 30 8 M20 12 V20 L26 24" /></svg>
-            <h3>Everyday UK life</h3>
-            <p>The small unwritten rules — queueing, small talk, tipping, weather — that make daily life smoother.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+  --radius: 14px;
+  --max-width: 1120px;
+}
 
-    <section class="story" id="story" aria-labelledby="story-heading">
-      <div class="wrap story-inner">
-        <div class="story-text">
-          <h2 id="story-heading">Why we're building this</h2>
-          <p>
-            Becoming a software developer can help others in ways you could never quite imagine —
-            and it can inspire others to do the same. Naija to UK exists for one reason: Nigerians
-            arriving in the UK for the first time deserve better than piecing their new life
-            together from a dozen different tabs.
-          </p>
-          <p>
-            Moving to a new country can be exciting, but it can also be confusing and genuinely
-            stressful, especially when the language, the weather and the whole way of life feel
-            completely different. We want this site to hand you the knowledge and context to feel
-            steadier from day one, not weeks in.
-          </p>
-          <p>
-            So instead of searching endlessly across different sites and forums, our aim is simple:
-            one place with everything a new arrival needs, and then some — built to make people feel
-            a little more confident and a little more prepared, even if it's just a little bit.
-          </p>
-          <p>
-            My name is Beatrice — I know, not very Nigerian — my Nigerian names are Ayomide and
-            Alioma. I was on a software development course when I was asked to write an essay on
-            what change I'd want to make with an app or website. I thought long and hard, and landed
-            on something small and everyday — the kind of thing people don't always talk about, but
-            that I've seen up close. So many of us come to the UK, some with guidance, many with none
-            at all. I realised that maybe I could make a small difference with the little I've
-            learned, because no one should have to figure it all out alone.
-          </p>
-        </div>
-        <blockquote class="pull-quote">
-          <p>A simple, easy-to-use website for Nigerians, so they're ready to start their new life in the UK.</p>
-        </blockquote>
-      </div>
-    </section>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 
-    <section class="faq" id="faq" aria-labelledby="faq-heading">
-      <div class="wrap">
-        <h2 id="faq-heading">Frequently asked questions</h2>
-        <p class="section-lede">
-          A few honest answers, from the practical to the personal.
-        </p>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Is this free to use?</summary>
-            <p>Yes — it's completely free, no sign-up fee or any sort of catch.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Is this only for Nigerians?</summary>
-            <p>It's built with Nigerians moving to the UK in mind — but if you aren't Nigerian and still want to use the website, you are more than welcome to!</p>
-          </details>
-          <details class="faq-item">
-            <summary>Do I need to create an account?</summary>
-            <p>No — everything on the site is free to browse, no account needed.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What topics does it cover?</summary>
-            <p>From housing to transport to even learning some British phrases — we've got six main topics covering what you actually need to settle in.</p>
-          </details>
-          <details class="faq-item">
-            <summary>When will the site launch?</summary>
-            <p>No fixed date yet — but everyone on the waitlist will be the first to know the moment it's ready.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Do I need a visa to move to the UK?</summary>
-            <p>Yes, most Nigerians need a visa to move to the UK — the type depends on why you're coming (work, study, family, etc.). We'll cover the specifics properly once the full guide is live.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What's the weather actually like?</summary>
-            <p>Way colder and rainier than Nigeria most of the year — layers are your best friend.</p>
-          </details>
-          <details class="faq-item">
-            <summary>How do I open a UK bank account?</summary>
-            <p>You'll usually need proof of address and ID — some banks also accept new arrivals without a fixed address yet. We'll go deeper on this in the full guide.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What should I pack when moving?</summary>
-            <p>Warm layers, comfortable waterproof shoes, and any important documents — the rest you can buy once you're here.</p>
-          </details>
-        </div>
-      </div>
-    </section>
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-    <section class="join" id="join" aria-labelledby="join-heading">
-      <div class="wrap join-inner">
-        <h2 id="join-heading">Be the first to know when we launch</h2>
-        <p class="section-lede">
-          Naija to UK is being built right now. Leave your email and we'll let you know the moment
-          it's ready.
-        </p>
-        <!-- Replace the placeholder below with your own Formspree endpoint,
-             e.g. https://formspree.io/f/xzzpqrst -->
-        <form id="joinForm" class="join-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-          <div class="field">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-            <p class="field-hint" id="emailHint">We'll only use this to tell you about the launch.</p>
-          </div>
-          <button type="submit" class="btn btn-primary">Notify me</button>
-        </form>
-        <p class="join-message" id="joinMessage" role="status" aria-live="polite"></p>
-      </div>
-    </section>
-  </main>
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; margin: 0 0 0.5em; color: var(--color-green-dark); }
+p { margin: 0 0 1em; max-width: 62ch; }
+a { color: var(--color-green); }
+img, svg { display: block; max-width: 100%; }
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div>
-        <p class="footer-logo">Naija <span aria-hidden="true">→</span> UK</p>
-        <p class="footer-tag">Your guide to starting life in the UK</p>
-      </div>
-      <p class="footer-meta">&copy; <span id="year"></span> Naija to UK. Built with care, one step at a time.</p>
-    </div>
-  </footer>
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
 
-  <script src="script.js"></script>
-</body>
-</html>
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: 1rem; top: -60px;
+  background: var(--color-green-dark); color: #fff;
+  padding: 0.6em 1em; border-radius: 8px; z-index: 100;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+:focus-visible {
+  outline: 3px solid var(--color-amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------
+   Header
+--------------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(250, 246, 238, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 1rem; }
+.logo {
+  font-family: var(--font-display); font-weight: 600; font-size: 1.3rem;
+  color: var(--color-green-dark); text-decoration: none;
+}
+.logo-arrow { color: var(--color-amber); }
+
+.nav-list { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+.nav-list a { text-decoration: none; color: var(--color-text); font-weight: 500; }
+.nav-list a:hover { color: var(--color-green); }
+
+.nav-toggle {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 40px; height: 40px; position: relative;
+}
+.nav-toggle-bar, .nav-toggle-bar::before, .nav-toggle-bar::after {
+  content: ""; position: absolute; left: 8px; right: 8px; height: 2px;
+  background: var(--color-text); border-radius: 2px;
+}
+.nav-toggle-bar { top: 19px; }
+.nav-toggle-bar::before { top: -7px; }
+.nav-toggle-bar::after { top: 7px; }
+
+/* ---------------------------------------------
+   Hero
+--------------------------------------------- */
+.hero { padding-block: 4.5rem 3rem; }
+.hero-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; }
+.hero-visual { order: -1; align-self: center; }
+.hero-copy { max-width: 640px; text-align: left; }
+
+.eyebrow-plain { color: var(--color-text-soft); margin-bottom: 0.6em; font-size: 0.95rem; }
+.hero h1 { font-size: var(--step-3); margin-bottom: 0.15em; }
+.subheading {
+  font-family: var(--font-display); font-size: var(--step-1);
+  color: var(--color-navy); margin-bottom: 1.1em; font-weight: 500;
+}
+.welcome { color: var(--color-text-soft); font-size: var(--step-0); }
+
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+
+.btn {
+  display: inline-block; padding: 0.85em 1.6em; border-radius: 999px;
+  font-weight: 600; text-decoration: none; border: 2px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--color-green); color: #fff; }
+.btn-primary:hover { background: var(--color-green-dark); }
+.btn-ghost { border-color: var(--color-green); color: var(--color-green-dark); }
+.btn-ghost:hover { background: var(--color-green); color: #fff; }
+
+.hero-visual { display: flex; justify-content: center; }
+.route-svg { width: 100%; max-width: 400px; }
+.route-path {
+  fill: none; stroke: var(--color-navy); stroke-width: 2.5; stroke-linecap: round;
+  stroke-dasharray: 500; stroke-dashoffset: 500;
+  animation: draw-route 1.6s ease forwards 0.3s;
+}
+@keyframes draw-route { to { stroke-dashoffset: 0; } }
+.route-dot { fill: var(--color-amber); }
+.route-label { font-family: var(--font-body); font-size: 13px; fill: var(--color-text-soft); }
+.route-plane path { fill: var(--color-green-dark); }
+@media (prefers-reduced-motion: reduce) {
+  .route-path { stroke-dashoffset: 0; animation: none; }
+}
+
+/* ---------------------------------------------
+   Help section
+--------------------------------------------- */
+.help { padding-block: 3.5rem; }
+.help h2 { font-size: var(--step-2); }
+.section-lede { color: var(--color-text-soft); font-size: 1.05rem; }
+
+.help-grid {
+  list-style: none; margin: 2rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.help-card {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 1.6rem;
+}
+.help-icon {
+  width: 34px; height: 34px; margin-bottom: 0.9rem;
+}
+.help-icon path, .help-icon circle {
+  fill: none; stroke: var(--color-green); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.help-card h3 { font-size: 1.15rem; margin-bottom: 0.4em; }
+.help-card p { color: var(--color-text-soft); margin-bottom: 0; font-size: 0.98rem; }
+
+/* ---------------------------------------------
+   Story section
+--------------------------------------------- */
+.story { padding-block: 3.5rem; background: var(--color-navy); color: #f3efe4; }
+.story h2 { color: #fff; font-size: var(--step-2); }
+.story p { color: #dfe4ea; }
+.story-inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
+
+.pull-quote {
+  margin: 0; padding: 1.5rem 0 1.5rem 1.5rem; border-left: 3px solid var(--color-amber);
+  font-family: var(--font-display); font-size: 1.3rem; font-style: normal; color: #fff;
+}
+.pull-quote p { max-width: none; }
+
+/* ---------------------------------------------
+   FAQ section
+--------------------------------------------- */
+.faq { padding-block: 3.5rem; }
+.faq h2 { font-size: var(--step-2); }
+
+.faq-list { margin-top: 2rem; border-top: 1px solid var(--color-border); }
+.faq-item { border-bottom: 1px solid var(--color-border); }
+.faq-item summary {
+  padding: 1.1rem 0.25rem;
+  font-weight: 600; font-size: 1.05rem;
+  cursor: pointer; list-style: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-family: var(--font-display);
+  font-size: 1.4rem; color: var(--color-green);
+  flex-shrink: 0; line-height: 1;
+  transition: transform 0.15s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover { color: var(--color-green-dark); }
+.faq-item p {
+  color: var(--color-text-soft); max-width: 68ch;
+  padding: 0 0.25rem 1.2rem;
+  margin: 0;
+}
+
+/* ---------------------------------------------
+   Join section
+--------------------------------------------- */
+.join { padding-block: 4rem; }
+.join-inner { max-width: 560px; }
+.join h2 { font-size: var(--step-2); }
+
+.join-form { display: flex; gap: 0.75rem; align-items: flex-start; flex-wrap: wrap; margin-top: 1.5rem; }
+.field { flex: 1 1 260px; }
+.field label { display: block; font-weight: 600; margin-bottom: 0.4em; }
+.field input {
+  width: 100%; padding: 0.75em 1em; border-radius: 10px;
+  border: 1.5px solid var(--color-border); font: inherit; background: var(--color-surface);
+}
+.field input:focus { border-color: var(--color-green); }
+.field-hint { color: var(--color-text-soft); font-size: 0.85rem; margin: 0.4em 0 0; }
+.join-form .btn { margin-top: 1.9rem; }
+
+.join-message { margin-top: 1rem; font-weight: 600; min-height: 1.5em; }
+.join-message.success { color: var(--color-green-dark); }
+.join-message.error { color: #b3401f; }
+
+/* ---------------------------------------------
+   Footer
+--------------------------------------------- */
+.site-footer { border-top: 1px solid var(--color-border); padding-block: 2rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--font-display); font-weight: 600; margin: 0; color: var(--color-green-dark); }
+.footer-tag { margin: 0.2em 0 0; color: var(--color-text-soft); font-size: 0.9rem; }
+.footer-meta { color: var(--color-text-soft); font-size: 0.85rem; margin: 0; }
+
+/* ---------------------------------------------
+   Responsive
+--------------------------------------------- */
+@media (max-width: 860px) {
+  .story-inner { grid-template-columns: 1fr; }
+  .help-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .help-grid { grid-template-columns: 1fr; }
+  .nav-toggle { display: block; }
+  .nav-list {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    max-height: 0; overflow: hidden; transition: max-height 0.25s ease;
+  }
+  .nav-list.open { max-height: 300px; }
+  .nav-list li { padding: 0.9rem 1.5rem; border-top: 1px solid var(--color-border); }
+  .join-form .btn { margin-top: 0.75rem; }
+}
