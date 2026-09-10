@@ -103,8 +103,8 @@ img, svg { display: block; max-width: 100%; }
    Hero
 --------------------------------------------- */
 .hero { padding-block: 4.5rem 3rem; }
-.hero-inner { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-.hero-visual { order: -1; }
+.hero-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; }
+.hero-visual { order: -1; align-self: center; }
 .hero-copy { max-width: 640px; text-align: left; }
 
 .eyebrow-plain { color: var(--color-text-soft); margin-bottom: 0.6em; font-size: 0.95rem; }
