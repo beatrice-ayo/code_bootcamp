@@ -181,6 +181,20 @@ img, svg { display: block; max-width: 100%; }
 }
 .pull-quote p { max-width: none; }
 
+.bio-note {
+  margin-top: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+.bio-label {
+  font-family: var(--font-display); font-size: 0.9rem;
+  color: var(--color-amber); text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+}
+.bio-note p:last-child { margin-bottom: 0; font-size: 0.98rem; }
+
 /* ---------------------------------------------
    FAQ section
 --------------------------------------------- */
